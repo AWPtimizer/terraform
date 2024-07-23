@@ -14,9 +14,13 @@ provider "aws" {
 
 resource "aws_instance" "my_ec2_instance" {
   ami = "ami-0ad21ae1d0696ad58"
-  instance_type = "t2.mirco"
+  instance_type = "t2.micro"
   tags = {
-    Name = "day1-terraform"
+    Name = "day1-terraform-test"
   }
   key_name = "test"
+}
+
+output "ec2_public_ips" {
+  value = aws_instance.my_ec2_instance.public_ip
 }
