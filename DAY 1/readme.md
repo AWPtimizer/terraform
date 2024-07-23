@@ -8,6 +8,16 @@ terraform init
 
 This command initializes the Terraform working directory, downloading any necessary provider plugins.
 
+## Dry run Configuration
+
+In your terminal, navigate to the directory containing your Terraform configuration files and run:
+
+```
+terraform plan
+```
+
+This command analyzes your configuration and current state, then generates a plan detailing what actions it will take during the apply step.
+
 ## Apply the Configuration
 
 Run the following command to create the AWS resources defined in your Terraform configuration:
